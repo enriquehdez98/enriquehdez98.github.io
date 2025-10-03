@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre 3D Slicer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: url('source/imagen3.png') no-repeat center center/cover;
+            background-attachment: fixed;
+            color: white;
+            overflow-x: hidden;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            text-transform: uppercase;
+            background: rgba(18, 18, 18, 0.8);
+        }
+        .logo {
+            text-align: center;
+        }
+        .logo h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: #D3D3D3;
+        }
+        .logo p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: #A9A9A9;
+
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a.active {
+            color: #D3D3D3;
+        }
+        .hero {
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 80vh;
+        }
+        .content {
+            padding-left: 5%;
+        }
+        .content h2 {
+            font-size: 6rem;
+            color: #ffffff;
+            margin: 0;
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+        }
+        .content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .social {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .social a {
+            display: block;
+            margin: 10px 0;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        /* Estilo para la presentación del equipo */
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+        .team-member {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 200px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+        }
+        .team-member img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .team-member h3 {
+            margin-top: 10px;
+            color: #D3D3D3;
+        }
+        .team-member p {
+            color: #A9A9A9;
+        }
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #D3D3D3;
+            text-align: center;
+        }
+        /* --------------------
+        Diseño responsivo
+        -------------------- */
+
+    @media (max-width: 800px) {
+        header {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        nav a {
+            display: block;
+            margin: 10px 0;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+        }
+
+        .event-info h3 {
+            font-size: 1.2rem;
+        }
+
+        .agenda-item h3 {
+            font-size: 1.2rem;
+        }
+
+        .agenda-item p {
+            font-size: 0.9rem;
+        }
+
+        .newsletter input,
+        .newsletter button {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .social {
+            position: static;
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+        .agenda-item .bar {
+            display: none;
+        }
+    }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="speakers.html">Ponentes</a>
+        <a href="#" class="active">Sobre 3D Slicer</a>
+    </nav>
+    <div class="logo">
+        <h1>3D SLICER</h1>
+        <p>for Latinoamerica</p>
+    </div>
+    <p>Estado de México, México, 2025</p>
+</header>
+
+<div class="content">
+    <h2>¿Qué es 3D Slicer?</h2>
+    <p>
+        3D Slicer es una plataforma de software libre y de código abierto diseñada para el procesamiento, análisis y visualización de imágenes médicas en 3D. 
+        Es utilizada por profesionales en medicina, ingeniería biomédica e investigación científica para realizar tareas como segmentación de imágenes, reconstrucción tridimensional y análisis cuantitativo.
+    </p>
+
+    <h2>¿Qué es 3D Slicer for Latin America?</h2>
+    <p>
+        El proyecto 3D Slicer para América Latina apoyado por Chan Zuckerberg Initiative pretende aprovechar la infraestructura de internacionalización de 3D Slicer para localizar el software al español y al portugués, y desarrollar nuevas herramientas de software que permitan la localización automática de tutoriales.
+        <br>
+        <br>
+        El proyecto incluye la traducción de módulos, extensiones, documentación, glosario y tutoriales al portugués y al español. También incluye la creación de nuevos tutoriales con la capacidad de exportarlos en presentaciones. El 3D Slicer para América Latina también ofrece asistencia en la coordinación de eventos de demostración de Slicer y tutoriales. En resumen, el objetivo general de esta iniciativa es establecer una novedosa infraestructura de software capaz de automatizar la localización, las pruebas y las versiones de los tutoriales de 3D Slicer.
+        <br>
+        <br>
+        Las actividadees principales son lideradas por la Dra. Sonia Pujol. Mientras que en brasil Las actividades en la Universidad de São Paulo (USP) serán coordinadas por el Prof. Luiz Murta, Ph.D., Profesor Asociado del Departamento de Informática y Matemáticas. El Departamento de Informática y Matemáticas será responsable de la infraestructura del servidor computacional y de la organización de los eventos de divulgación en la USP.
+        <br>
+        <br>
+
+        Asimismo, las actividades en Mexico en la Universidad Autónoma del Estado de México (UAEM) serán coordinadas por la Prof. Adriana Vilchis, D., Profesora Asociada de la Facultad de Ingeniería. El Departamento de Ingeniería será responsable de la infraestructura del servidor computacional y de la organización de eventos de divulgación en la UAEM.
+    </p>
+
+    <h2 class="section-title">Nuestro Equipo</h2>
+    <div class="team">        
+        <!-- Equipo Principal -->
+        <div class="team-member">
+            <img src="https://slicerlatinamerica.github.io/media/public/images/photos/sonia_pujol.jpg" alt="Sonia Pujol">
+            <h3>Sonia Pujol</h3>
+            <p>Investigadora Principal</p>
+        </div>
+    
+        <div class="team-member">
+            <img src="https://slicerlatinamerica.github.io/media/public/images/photos/steve_pieper.jpeg" alt="Steve Pieper">
+            <h3>Steve Pieper</h3>
+            <p>Ingeniero de Software</p>
+        </div>
+    
+        <div class="team-member">
+            <img src="https://slicerlatinamerica.github.io/media/public/images/photos/andras_lasso.jpg" alt="Andras Lasso">
+            <h3>Andras Lasso</h3>
+            <p>Ingeniero de Software</p>
+        </div>
+    </div>
+
+
+
+<!-- Equipo Mexicano -->
+<h2 class="section-title">Equipo Mexicano</h2>
+<div class="team"> 
+        <div class="team-member">
+            <img src="https://slicerlatinamerica.github.io/media/public/images/photos/adriana_gonzalez.png">
+            <h3>Adriana Vilchis</h3>
+            <p>Investigadora Principal del Equipo Mexicano</p>
+        </div>
+
+        <div class="team-member">
+            <img src="https://slicerlatinamerica.github.io/media/public/images/photos/victor_serrano.jpg" alt="Victor M. Serrano">
+            <h3>Victor M. Serrano</h3>
+            <p>Ingeniero de Software</p>
+        </div>
+
+        <div class="team-member">
+            <img src="https://slicerlatinamerica.github.io/media/public/images/photos/enrique_laredo.jpg" alt="Enrique Hernández">
+            <h3>Enrique Hernandez</h3>
+            <p>Desarrollador</p>
+        </div>
+    
+        <div class="team-member">
+            <img src="https://slicerlatinamerica.github.io/media/public/images/photos/monserrat_rios.jpg" alt="Monserrat">
+            <h3>Monserrat Ríos Hernández</h3>
+            <p>Desarrollador</p>
+        </div>
+    
+        <div class="team-member">
+            <img src="/source/image_val.png" alt="Valeria">
+            <h3>Valeria Gómez Valdes</h3>
+            <p>Traductora</p>
+        </div>
+
+
+    </div>
+</div>
+</div>
+
+<!-- Equipo Brasileño -->
+<h2 class="section-title">Equipo Brasileño</h2>
+<div class="team"> 
+        <div class="team-member">
+            <img src="https://slicerlatinamerica.github.io/media/public/images/photos/luiz_murta.jpg" alt="Luiz Murta">
+            <h3>Luiz Murta</h3>
+            <p>Investigador Principal del Equipo Brasileño</p>
+        </div>
+    
+        <div class="team-member">
+            <img src="https://slicerlatinamerica.github.io/media/public/images/photos/douglas.jpg" alt="Douglas Gonçalves">
+            <h3>Douglas Gonçalves</h3>
+            <p>Ingeniero de Software</p>
+        </div>
+    
+        <div class="team-member">
+            <img src="https://slicerlatinamerica.github.io/media/public/images/photos/lucas_silva.jpeg" alt="Lucas Silva">
+            <h3>Lucas Silva</h3>
+            <p>Desarrollador</p>
+        </div>
+
+
+        <div class="team-member">
+            <img src="/source/image_lucas.png" alt="Lucas">
+            <h3>Lucas Miranda</h3>
+            <p>Desarrollador</p>
+        </div>
+        
+
+
+
+        <div class="team-member">
+            <img src="https://slicerlatinamerica.github.io/media/public/images/photos/paulo_veiga.jpeg" alt="Paulo Veiga">
+            <h3>Paulo Veiga</h3>
+            <p>Traductor</p>
+        </div>
+</div>
+    
+
+
+
+<div class="social">
+    <a href="https://github.com/SlicerLatinAmerica" target="_blank"><i class="fa-brands fa-github"></i></a>
+    <a href="https://slicerlatinamerica.github.io/events.html" target="_blank"><i class="fa-solid fa-globe"></i></a>
+</div>
+
+</body>
+</html>

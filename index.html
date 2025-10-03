@@ -1,0 +1,367 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller - 3D slicer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: url('source/imagen3.png') no-repeat center center/cover;
+            background-attachment: fixed;
+            color: white;
+            overflow-x: hidden;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            text-transform: uppercase;
+            background: rgba(18, 18, 18, 0.8);
+        }
+        .logo {
+            text-align: center;
+        }
+        .logo h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: #D3D3D3;
+        }
+        .logo p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: #A9A9A9;
+
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a.active {
+            color: #D3D3D3;
+        }
+        .hero {
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 80vh;
+        }
+        .content {
+            padding-left: 5%;
+        }
+        .content h2 {
+            font-size: 6rem;
+            color: #ffffff;
+            margin: 0;
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+        }
+        .event-info {
+            background: #7d8185b5;
+            padding: 20px;
+            max-width: 450px;
+        }
+        .event-info h3 {
+            margin: 0 0 10px 0;
+            font-size: 1rem;
+            color: #ffffff;
+        }
+        .event-info p {
+            margin: 5px 0;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: 0cap solid #5a7d9db5;
+            text-decoration: none;
+            color: #9fa5aab5;
+            background: white;
+        }
+        .social {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .social a {
+            display: block;
+            margin: 10px 0;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+        .agenda {
+            background: black;
+            color: #D3D3D3;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .agenda h2 {
+            font-size: 1rem;
+            margin-bottom: 30px;
+        }
+        .agenda-item {
+            display: flex;
+            align-items: center;
+            margin: 20px auto;
+            max-width: 500px;
+            text-align: left;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .agenda-item .bar {
+            width: 5px;
+            height: 100px;
+            background: white;
+            margin-right: px;
+        }
+        .agenda-item h3 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        .agenda-item p {
+            margin: 5px 0;
+            font-size: 1rem;
+            color: white;
+        }
+        .chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #A9A9A9;
+            padding: 10px;
+            border-radius: 50%;
+        }        .newsletter {
+            background: black;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .newsletter-container {
+            background: #A9A9A9;
+            padding: 30px;
+            display: inline-block;
+            text-align: left;
+        }
+        .newsletter h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: white;
+            text-transform: uppercase;
+        }
+        .newsletter p {
+            color: black;
+            font-size: 1rem;
+        }
+        .newsletter input {
+            padding: 10px;
+            border: 2px solid black;
+            margin-right: 10px;
+        }
+        .newsletter button {
+            padding: 10px 20px;
+            border: 2px solid black;
+            background: white;
+            cursor: pointer;
+        }
+        /* --------------------
+        Diseño responsivo
+        -------------------- */
+
+    @media (max-width: 800px) {
+        header {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        nav a {
+            display: block;
+            margin: 10px 0;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+        }
+
+        .event-info h3 {
+            font-size: 1.2rem;
+        }
+
+        .agenda-item h3 {
+            font-size: 1.2rem;
+        }
+
+        .agenda-item p {
+            font-size: 0.9rem;
+        }
+
+        .newsletter input,
+        .newsletter button {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .social {
+            position: static;
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+        .agenda-item .bar {
+            display: none;
+        }
+    }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="#" class="active">Inicio</a>
+        <a href="\speakers.html">Ponentes</a>
+        <a href="\about.html">Sobre 3D Slicer Latinoamerica</a>
+    </nav>
+    <div class="logo">
+        <h1>3D SLICER</h1>
+        <p>for Latinoamerica</p>
+    </div>
+    <p>Estado de México, México, 2025</p>
+</header>
+
+<div class="hero">
+    <div class="social">
+        <a href="https://github.com/SlicerLatinAmerica" target="_blank"><i class="fa-brands fa-github"></i></a>        
+        <a href="https://slicerlatinamerica.github.io/events.html" target="_blank"><i class="fa-solid fa-globe"></i></a> 
+    </div>
+
+    <div class="content">
+        <h2>3D Slicer: Taller de tecnología basada en IA para fisioterapeutas</h2>
+
+        <div class="event-info">
+            <h3> 8 Y 10 DE OCTUBRE DEL 2025 DE 9:00 A 11:00 HR</h3>
+            <p></p>
+            <p>FACULTAD DE MEDICINA, UNIVERIDAD AUTÓNOMA DEL ESTADO DE MÉXICO </p>
+
+            <a href="#" class="button">REGISTRO</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="agenda">
+
+    <h2>Taller de tecnología basada en IA para fisioterapeutas</h2>
+    <p> El 8 y 10 de octubre de 2025 se llevará a cabo un evento académico centrado en el papel de la fisioterapeuta en el campo de la imagenología médica, con un enfoque especial en el uso del software 3D Slicer y la tecnologías basadas en inteligecia artifical. La jornada reunirá a destacados expertos nacionales e internacionales provenientes de instituciones como Harvard Medical School, la Universidad Autónoma del Estado de México, y la Universidad Militar Nueva Granada. A través de conferencias magistrales, ponencias y talleres prácticos, se busca fortalecer el conocimiento y las competencias de estudiantes y profesionales en técnicas avanzadas de adquisición, análisis y segmentación de imágenes médicas, promoviendo la investigación y la innovación en aplicaciones clínicas.
+</p>
+    
+    <h2>Agenda del evento</h2>
+    <h3>Día 1: 8 de octubre de 2025</h3>
+    <div class="agenda-item">
+    <div class="bar"></div>
+        <div>
+            <h3>Inauguración:</h3>
+            <h4>Discurso de bienvenida y comentarios iniciales</h4>
+            <p>Dr. Adriana Herlinda Vilchis González - 9:00-9:10 AM</p>
+        </div>
+    </div>
+    <div class="agenda-item">
+        <div class="bar"></div>
+        <div>
+            <h3>Conferencia 1:</h3>
+            <h4>3D Slicer: tendiendo puentes entre la imagenología y la IA</h4>
+            <p>Dr. Sonia Pujol - 09:10-09:30 AM</p>
+        </div>
+    </div>
+    <div class="agenda-item">
+        <div class="bar"></div>
+        <div>
+            <h3>Sesión práctica 1:</h3>
+            <h4>Carga de datos DICOM y visualización 3D</h4>
+            <p>Dr. Sonia Pujol - 09:30-10:15 AM</p>
+        </div>
+    </div>
+    <div class="agenda-item">
+        <div class="bar"></div>
+        <div>
+            <h3>Sesión práctica 2:</h3>
+            <h4>Anotación de imágenes con la herramienta Editor de segmentos</h4>
+            <p>Dr. Sonia Pujol -10:15-11:00 AM</p>
+        </div>
+    </div>
+    <p>Requisitos: Realizar su registro en tiempo y forma, el material será proporcionado durante el evento.</p>
+
+
+    <br>
+    <h3>Día 2: 10 de octubre de 2025</h3>
+
+    <div class="agenda-item">
+        <div class="bar"></div>
+        <div>
+            <h3>Introducción:</h3>
+            <h4>Discurso de bienvenida y comentarios iniciales</h4>
+            <p>Dr. Adriana Herlinda Vilchis González - 09:00-09:10 AM </p>
+        </div>
+    </div>
+
+    <div class="agenda-item">
+        <div class="bar"></div>
+        <div>
+            <h3>Sesión práctica 3:</h3>
+            <h4>Segmentación basada en IA en 3D Slicer</h4>
+            <p>Dr. Sonia Pujol - 09:10-10:10 AM</p>
+        </div>
+    </div>
+
+    <div class="agenda-item">
+        <div class="bar"></div>
+        <div>
+            <h3>Conferencia 2:</h3>
+            <h4>Presentación del proyecto 3D Slicer para América Latina</h4>
+            <p>Dr. Sonia Pujol - 10:10-10:30 AM</p>
+        </div>
+    </div>
+
+    <div class="agenda-item">
+        <div class="bar"></div>
+        <div>
+            <h3>Conferencia 3:</h3>
+            <h4>Mi experiencia con 3D Slicer</h4>
+            <p>Ing. Leidy Mora - 10:30-10:45 AM</p>
+        </div>
+    </div>
+
+    <div class="agenda-item">
+      <div class="bar"></div>
+        <div>
+            <h3>Sesión de preguntas y respuestas</h3>
+            <p> 10:45-11:00</p>
+        </div>
+    </div>
+
+    <p>Requisitos: Realizar su registro en tiempo y forma, el material será proporcionado durante el evento.</p>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="newsletter">
+    <div class="newsletter-container">
+        <h2>MANTENTE AL DÍA</h2>
+        <p>Regístrate para recibir el boletín informativo con los proximos eventos.</p>
+        <input type="email" placeholder="Ingresa tu email aquí*">
+        <button>Suscribirse</button>
+    </div>
+</div>
+
+<div class="chat-button">💬</div>
+
+</body>
+</html>
+
+

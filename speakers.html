@@ -1,0 +1,271 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponentes - 3D Slicer Latinoamérica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: url('source/imagen3.png') no-repeat center center/cover;
+            background-attachment: fixed;
+            color: white;
+            overflow-x: hidden;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            text-transform: uppercase;
+            background: rgba(18, 18, 18, 0.8);
+        }
+        .logo {
+            text-align: center;
+        }
+        .logo h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: #D3D3D3;
+        }
+        .logo p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: #A9A9A9;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a.active {
+            color: #D3D3D3;
+        }
+        .speakers-section {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .speakers-section h2 {
+            font-size: 3rem;
+            margin-bottom: 40px;
+        }
+        .speakers-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .speaker-card {
+            background: rgba(125, 129, 133, 0.7);
+            width: 350px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            transition: transform 0.3s;
+        }
+        .speaker-card:hover {
+            transform: translateY(-10px);
+        }
+        .speaker-image {
+            width: 100%;
+            height: 250px;
+            background-color: #555;
+            margin-bottom: 15px;
+            background-size: cover;
+            background-position: center;
+        }
+        .speaker-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.5rem;
+            color: white;
+        }
+        .speaker-card h4 {
+            margin: 0 0 10px 0;
+            font-size: 1rem;
+            color: #D3D3D3;
+            font-style: italic;
+        }
+        .speaker-card p {
+            margin: 10px 0;
+            font-size: 0.9rem;
+            color: white;
+        }
+        .social-links {
+            margin-top: 15px;
+        }
+        .social-links a {
+            color: white;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        .newsletter {
+            background: black;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .newsletter-container {
+            background: #A9A9A9;
+            padding: 40px;
+            display: inline-block;
+            text-align: left;
+        }
+        .newsletter h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: white;
+            text-transform: uppercase;
+        }
+        .newsletter p {
+            color: black;
+            font-size: 1rem;
+        }
+        .newsletter input {
+            padding: 10px;
+            border: 2px solid black;
+            margin-right: 10px;
+        }
+        .newsletter button {
+            padding: 10px 20px;
+            border: 2px solid black;
+            background: white;
+            cursor: pointer;
+        }
+        .chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #A9A9A9;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        /* --------------------
+        Diseño responsivo
+        -------------------- */
+
+    @media (max-width: 800px) {
+        header {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        nav a {
+            display: block;
+            margin: 10px 0;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+        }
+
+        .event-info h3 {
+            font-size: 1.2rem;
+        }
+
+        .agenda-item h3 {
+            font-size: 1.2rem;
+        }
+
+        .agenda-item p {
+            font-size: 0.9rem;
+        }
+
+        .newsletter input,
+        .newsletter button {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .social {
+            position: static;
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+        .agenda-item .bar {
+            display: none;
+        }
+    }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="\index.html">Inicio</a>
+        <a href="#" class="active">Ponentes</a>
+        <a href="\about.html">Sobre 3D Slicer Latinoamerica</a>
+    </nav>
+    <div class="logo">
+        <h1>3D SLICER</h1>
+        <p>for Latinoamerica</p>
+    </div>
+    <p>Estado de México, México, 2025</p>
+</header>
+
+<div class="speakers-section">
+    <h2>Nuestros Ponentes</h2>
+    
+    <div class="speakers-container">
+        <!-- Ponente 1 -->
+        <div class="speaker-card">
+            <div class="speaker-image" style="background-image: url('https://slicerlatinamerica.github.io/media/public/images/photos/sonia_pujol.jpg');"></div>
+            <h3>Dr. Sonia Pujol</h3>
+            <h4>Harvard Medical School</h4>
+            <p>Dra. Sonia Pujol es profesora adjunta de Radiología en la Facultad de Medicina de Harvard y científica de datos en el Brigham and Women's Hospital de Boston, Massachusetts. Formada como física e ingeniera de software, su interés investigador es el uso de tecnología basada en IA para la caracterización de enfermedades y la planificación quirúrgica. 
+            Dra. Pujol tiene 20 años de experiencia con el software de código abierto 3D Slicer para el análisis de imágenes médicas y la investigación en inteligencia artificial. Dirige equipos de desarrolladores de 3D Slicer en África y América Latina, imparte cursos de formación sobre 3D Slicer y ofrece servicios de consultoría y asesoramiento sobre tecnología de código abierto. </p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/sonia-pujol-165660186/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-researchgate"></i></a>
+            </div>
+        </div>
+        
+        
+        <!-- Ponente 4 -->
+        <div class="speaker-card">
+            <div class="speaker-image" style="background-image: url('https://media.licdn.com/dms/image/v2/D4E03AQF3FEPlhggwJA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1725336577975?e=1753920000&v=beta&t=z8wfEgWPK6GAFA9Z319TnCbqJOmQDHVbGwI0Pb7tNOQ');"></div>
+            <h3>Ing. Leidy Mora</h3>
+            <h4>Universidad Militar Nueva Granada</h4>
+            <p>Leidy Mora es ingeniera biomédica egresada de la Universidad Militar Nueva Granada. Actualmente cursa la Maestría en Ingeniería Biomédica, enfocando su investigación en la aplicación de inteligencia artificial a la ecocardiografía. Cuenta con experiencia en proyectos de investigación que incluyen el uso de imágenes de ultrasonido como guía para procedimientos médicos, así como en la reconstrucción tridimensional de estructuras anatómicas mediante el software 3D Slicer. Su interés se centra en el desarrollo de tecnologías innovadoras para mejorar el diagnóstico y tratamiento en salud.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/leidy-mora-vaca/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-researchgate"></i></a>
+            </div>
+        </div>
+
+        <!-- Ponente 5 --><div class="speaker-card">
+            <div class="speaker-image" style="background-image: url(/source/image.png);"></div>
+            <h3>Adriana Herlinda Vilchis González</h3>
+            <h4>Facultad de Ingeniería de la Universidad Autónoma del Estado de México</h4>
+            <p>Adriana H. Vilchis González obtuvo el grado de doctor en Imagen, Visión y Robótica en el Instituto Nacional Politécnico de Grenoble, Francia. Actualmente es profesor investigador en las Facultades de Ingeniería y de Medicina de la Universidad Autónoma del Estado de México. Sus intereses científicos incluyen Robótica Médica, Realidad Virtual, Robots Suaves y Sistemas Mecatrónicos.</p>
+            <div class="social-links">
+                <a href="https://scholar.google.com/citations?user=phcDwNAAAAAJ&hl=fr" target="_blank"><i class="fab fa-google"></i></a>
+                <a href="https://www.researchgate.net/profile/Adriana-Vilchis-Gonzalez" target="_blank"><i class="fab fa-researchgate"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+    
+</div>
+
+
+<div class="newsletter">
+    <div class="newsletter-container">
+        <h2>MANTENTE AL DÍA</h2>
+        <p>Regístrate para recibir el boletín informativo con los proximos eventos.</p>
+        <input type="email" placeholder="Ingresa tu email aquí*">
+        <button>Suscribirse</button>
+    </div>
+</div>
+
+<div class="chat-button">💬</div>
+
+</body>
+</html>
